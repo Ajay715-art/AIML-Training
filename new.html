@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="division-block">
+    <h1>Welcome to style demo</h1>
+    <p>This is a paragraph demonstrating the styles applied to this document</p>
+</div>
+    <button onclick="diss()">Change Colors</button>
+<div class="tutorial">
+    <h1>Welcome</h1>
+    <p>This is a paragraph</p>
+</div>
+    <button onclick="effect()">Click here</button>
+    <script>
+        /*function diss(){
+                let div=document.querySelector('.division-block');
+                if(div.style.display==='none'){
+                    div.style.display='block';
+                } else {
+                    div.style.display='none';
+                }
+
+                let a=document.body.style.backgroundColor;
+            setInterval(() => {
+                a = a === "red" ? "blue" : "red";
+                document.body.style.backgroundColor = a;
+            }, 200);
+            }*/
+
+            function effect() {
+                let p=document.querySelector('.tutorial');
+                p.style.backgroundcolor='purple';
+                p.style.color='white';
+                p.style.padding='10px';
+                p.style.borderRadius='5px';
+                p.style.textAlign='center';
+                p.style.fontSize='20px';
+                p.style.border='2px solid black';
+                p.style.fontweight='bold';
+            }
+    </script>
+</body>
+</html>
