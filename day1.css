@@ -1,0 +1,90 @@
+p{
+    font-size: large;
+   color: red;
+   text-decoration: line-through;
+}
+.box{
+    border-color: burlywood;
+    border-width: 4px;
+    border-style: solid;
+}
+h2{
+    color: whitesmoke;
+}
+table{
+    font-family: Arial, Helvetica, sans-serif;
+}
+td{
+    color: darkmagenta;
+}
+th{
+    color: rgb(255, 255, 255);
+}
+button{
+    background-color: orange;
+    color: rgb(255, 255, 255);
+}
+.A{
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+.B{
+    background-color: blue;
+    color: rgb(255, 255, 255);
+}
+.C{
+    background-color: skyblue;
+    color: rgb(255, 255, 255);
+}
+#a{
+    color: rgb(255, 255, 255);
+}
+#b{
+    color: blue;
+}
+#c{
+    color: rgb(254, 254, 254);
+}
+.p{
+    color: navy;
+}
+.container{
+    text-align: center;
+}
+body{
+    background-color: rgb(255, 0, 221);
+}
+.I{
+    color: white;
+}
+.logo span{
+    color: #ff004f;
+}
+.logo h1{
+    color: white;
+    background-color: black;
+}
+.l4{
+    background-color: white;
+}
+#ll{
+    background-color: black;
+    color: #fff;
+    padding: 20px 0px 20px 0px;
+    margin: 20px 10px 40px 30px;
+    border-color: red;
+    border-radius: 50%;
+}
+#ll:hover{
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    cursor: pointer;
+}
+.x ,.y ,.z{
+    background-color: blue;
+    border-color: black;
+    width: 100px;
+}
+.x ,.y ,.z:hover{
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    cursor: pointer;
+}
