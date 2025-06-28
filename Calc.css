@@ -1,0 +1,66 @@
+.calculater {
+    display: flex;
+    gap: 20px;
+    width: 220px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fieldset {
+    width: 220px;
+    height: auto;
+}
+
+.f1 {
+    border: solid;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 10px;
+}
+
+.fac {
+    border: solid;
+    width: 50px;
+    height: 75px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#itb {
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 35px;
+}
+
+.button {
+    height: 50px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.f1:hover {
+    box-shadow: 0px 0px 10px blue;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.fac:hover {
+    box-shadow: 0px 0px 10px red;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.button:hover {
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+    transform: translateY(-3px);
+}
