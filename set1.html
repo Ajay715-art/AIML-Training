@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+        }
+        .container2 {
+            background-color: #00ffee;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .container3 {
+            background-color: #ff0000;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        p {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container2">
+        <h1>heading 1</h1>
+        <p>paragraph 1</p>
+    </div>
+    <div class="container3">
+        <h1>heading 2</h1>
+        <p>paragraph 2</p>
+    </div>
+    </div>
+    <button onclick="f()">Click me</button>
+    <script>
+        function f() {
+            const c=document.querySelectorAll('.container2');
+            c.forEach((element) => {
+                element.setAttribute('class' , 'container3');
+            });
+
+        }
+    </script>
+</body>
+</html>

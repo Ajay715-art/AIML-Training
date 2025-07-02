@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="colorInput" placeholder="Enter a color name or hex code">
+    <button id="submitBtn">Submit</button>
+    <script>
+        /*document.body.addEventListener("keydown",f);
+        document.body.addEventListener("keydown",g);
+        function f() {
+            document.body.style.backgroundColor = "red";
+        }
+        function g() {
+            alert("Hello World!");
+        }*/
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const color = document.getElementById('colorInput').value;
+            document.body.style.backgroundColor = color;
+        });
+</script>
+</body>
+</html>
