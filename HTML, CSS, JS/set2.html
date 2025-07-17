@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
+        }
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+    </div>
+    <input type="text" id="input" placeholder="Type something here...">
+    <input type="reset" value="Reset" id="reset">
+    <input type="submit" value="Submit" id="submit">
+    <script>
+        let input = document.getElementById("input");
+        let reset = document.getElementById("reset");
+        let submit = document.getElementById("submit");
+        reset.addEventListener("click", function() {
+            input.value = "";
+            input.style.backgroundColor = "white";
+        });
+        submit.addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Form submitted with value: " + input.value);
+        });
+    </script>
+    <script>
+        let a=document.getElementById("div");
+        a.addEventListener("mouseover", function() {
+            a.innerText=('Mouse Over!');
+            a.style.backgroundColor = 'red';
+        });
+        a.addEventListener("mouseout", function() {
+            a.innerText=('Mouse Out!');
+            a.style.backgroundColor = 'blue';
+        });
+        a.addEventListener("click", function() {
+            a.innerText=("Div Clicked!");
+            a.style.backgroundColor = "green";
+        });
+        a.addEventListener("mousedown", function() {
+            a.innerText=('Mouse Down!');
+            a.style.backgroundColor = "skyblue";
+        });
+        a.addEventListener("mouseup", function() {
+            a.innerText=('Mouse Up!');
+            a.style.backgroundColor = "orange";
+        });
+        a.addEventListener("dblclick", function() {
+            a.innerText=('Double Clicked!');
+            a.style.backgroundColor = "purple";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veteesh Portfolio</title>
+    <link rel="stylesheet" href="newportcs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring AI/ML Developer</p>
+                <h1>Hi, I'm <span>Veteesh Vardaboina</span><br>From MRCET</h1>
+            </div>
+        </div>
+    </div>
+
+    <!----------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me 4-1 rbg.png" alt="Veteesh">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Veteesh Vardaboina from Khammam, a passionate programmer and tech enthusiast. I started my journey with C and Python during my B.Tech and fell in love with problem-solving. I enjoy working on Machine Learning projects and aspire to be an expert in AI. I'm an active learner on platforms like HackerRank and love exploring HTML, CSS, Java, and DSA. I also overcome challenges like stage fear by pushing myself on stage and in group tasks. My current goal is to become a Full Stack AI/ML Developer.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python & DSA</span><br>Problem-solving on HackerRank</li>
+                            <li><span>AI & Machine Learning</span><br>Learning via real-world projects</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Java & C</span><br>Strong basics from academic learning</li>
+                            <li><span>Git & GitHub</span><br>Version control and collaboration</li>
+                            <li><span>Database</span><br>Basics of SQL and MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-Present</span><br>B.Tech at MRCET</li>
+                            <li><span>2021-2023</span><br>Intermediate at Sreenidhi Junior College</li>
+                            <li><span>2020-2021</span><br>SSC at ZPHS Vennavally</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li><span>Tech Learning</span><br>Self-learning AI, ML & Web Tech</li>
+                            <li><span>Certificates</span><br>Completed courses from HP, Oracle, and more</li>
+                            <li><span>Internship Search</span><br>Looking for government or certified internships</li>
+                            <li><span>Tollywood Lover</span><br>Big fan of Telugu cinema</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------projects----------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div class="project">
+                    <h2>🎨 Color Guessing Game</h2>
+                    <p>A fun game where users guess the color of text displayed rather than the color name. It improves logical thinking and attention to detail.</p>
+                    <p><strong>Tech Used:</strong> Python, Tkinter</p>
+                </div>
+                <div class="project">
+                    <h2>📊 Student Result System</h2>
+                    <p>A basic system to input and display student scores using Python and file handling techniques.</p>
+                    <p><strong>Tech Used:</strong> Python, File I/O</p>
+                </div>
+                <div class="project">
+                    <h2>🌐 Personal Portfolio Website</h2>
+                    <p>Developed my own portfolio to showcase skills, education, and projects, hosted online for recruiters.</p>
+                    <p><strong>Tech Used:</strong> HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------- contact section ----------->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-envelope"></i> veteesh@example.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Khammam, Telangana</p>
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <div class="social-icons">
+                <a href="https://github.com/veteesh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/veteesh" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+</body>
+</html>

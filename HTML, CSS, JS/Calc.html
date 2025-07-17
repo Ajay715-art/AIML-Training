@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calc.css">
+</head>
+
+<body>
+    <fieldset class="fieldset">
+        <div class="calculater">
+            <input type="text" placeholder="Enter Expression" id="itb"><br>
+            <div class="f1" id="btn1" onclick="clickbtn(this)">1</div>
+            <div class="f1" id="btn2" onclick="clickbtn(this)">2</div>
+            <div class="f1" id="btn3" onclick="clickbtn(this)">3</div>
+            <div class="f1" id="btn4" onclick="clickbtn(this)">4</div>
+            <div class="f1" id="btn5" onclick="clickbtn(this)">5</div>
+            <div class="f1" id="btn6" onclick="clickbtn(this)">6</div>
+            <div class="f1" id="btn7" onclick="clickbtn(this)">7</div>
+            <div class="f1" id="btn8" onclick="clickbtn(this)">8</div>
+            <div class="f1" id="btn9" onclick="clickbtn(this)">9</div>
+            <div class="f1" id="btn+" onclick="clickbtn(this)">+</div>
+            <div class="f1" id="btn0" onclick="clickbtn(this)">0</div>
+            <div class="f1" id="btn-" onclick="clickbtn(this)">-</div>
+            <div class="f1" id="btn*" onclick="clickbtn(this)">*</div>
+            <div class="f1" id="btn/" onclick="clickbtn(this)">/</div>
+            <div class="fac" id="btnAC" onclick="clickbtn(this)">AC</div>
+            <button class="button" id="btn=" onclick="clickbtn(this)">=</button>
+    </fieldset>
+    </div>
+    <script>
+        function clickbtn(btn){
+            let result=btn.innerText;
+            let inputBox = document.getElementById("itb");
+            switch(result){
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "0":
+                case "-":
+                case "+":
+                case "*":
+                case "/":
+                    inputBox.value += result;
+                    break;
+                case "AC":
+                    inputBox.value=" ";
+                    break;
+                case "=":
+                    try{
+                        inputBox.value=eval(inputBox.value)
+                    }
+                    catch(error){
+                        inputBox.value="Invalid Expression"
+                    }
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

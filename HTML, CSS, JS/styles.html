@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+        text-align: center;
+    }
+    h1 {
+        color: #ffffff;
+        text-align: center;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        display: inline-block;
+    }
+    .white-text{
+        color: rgb(0, 0, 0);
+        padding: 0.5em 1em;
+        text-align: center;
+        border-radius: 4px;
+        display: inline-block;
+        background-color: rgb(255, 255, 255);
+    }
+    .color-btn {
+        margin: 1em;
+        padding: 0.5em 1.5em;
+        font-size: 1em;
+        border-radius: 4px;
+        border: none;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div>
+    <h1>Welcome to style demo</h1>
+    <p>This is a paragraph demonstrating the styles applied to this document</p>
+    <p class="white-text">This is a paragraph with white text on a green beckground</p>
+</div>
+    <button onclick="diss()">Change Colors</button>
+    <script>
+        /*let x = false;
+
+        function changeColors() {
+            if (!x) {
+                document.body.style.backgroundColor = "#222831";
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "#00adb5";
+                document.getElementsByTagName("h1")[0].style.color = "#fff";
+                document.querySelector(".white-text").style.backgroundColor = "#393e46";
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.getElementsByTagName("h1")[0].style.backgroundColor = "lightblue";
+                document.getElementsByTagName("h1")[0].style.color = "#c800ff";
+                document.querySelector(".white-text").style.backgroundColor = "darkgreen";
+            }
+            x = !x;*/
+
+            /*let a=document.body.style.backgroundColor;
+            a=a==="red"?"blue":"red";
+            document.body.style.backgroundColor = a;*/
+
+            /*let a=document.body.style.backgroundColor;
+            setInterval(() => {
+                a = a === "red" ? "blue" : "red";
+                document.body.style.backgroundColor = a;
+            }, 200);*/
+
+            /*let a=["red", "blue", "green", "yellow", "purple"];
+            let i = 0;
+            setInterval(() => {
+                document.body.style.backgroundColor = a[i];
+                i = (i + 1) % a.length;
+            }, 200);
+        }
+
+        /*function diss(){
+                let div=document.querySelector('.division-block');
+                if(div.style.display==='none'){
+                    div.style.display='block';
+                } else {
+                    div.style.display='none';
+                }
+            }*/
+    </script>
+</body>
+</html>

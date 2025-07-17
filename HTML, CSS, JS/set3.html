@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background 0.5s;
+}
+    input[type="text"] {
+        width: 200px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        cursor: pointer;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+        background: #217dbb;
+    }
+    #output, #coords {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #container {
+        width: 100%;
+        height: 300px;
+        border: 1px solid black;
+        background-color: aqua;
+        position: relative;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name"><br>
+    <input type="text" id="age" placeholder="Enter your age"><br>
+    <input type="text" id="email" placeholder="Enter your email"><br>
+    <input type="submit" id="submit" value="Submit">
+    <div id="output"></div>
+    <div id="coords"></div>
+    <div id="container"></div>
+    <script>
+    const colors = ["red", "green", "blue", "orange", "purple", "yellow", "pink", "aqua", "lime", "coral"];
+    let colorIndex = 0;
+    document.getElementById("submit").addEventListener("click", function() {
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const email = document.getElementById("email").value;
+        document.getElementById("output").innerHTML = 
+            `<p>Name: ${name}</p>
+             <p>Age: ${age}</p>
+             <p>Email: ${email}</p>`;
+    });
+
+    
+    window.addEventListener("mousemove", function(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        document.getElementById("coords").innerHTML = `X: ${x}, Y: ${y}`;
+    });
+
+
+    document.addEventListener('keydown', function(event) {
+    colorIndex = (colorIndex + 1) % colors.length;
+    const nextColor = colors[(colorIndex + 1) % colors.length];
+    const nextNextColor = colors[(colorIndex + 2) % colors.length];
+
+    // Change body background
+    document.body.style.background = `linear-gradient(90deg, ${colors[colorIndex]}, ${nextColor})`;
+
+    // Change container background (different gradient)
+    document.getElementById("container").style.background = `linear-gradient(90deg, ${nextColor}, ${nextNextColor})`;
+});
+</script>
+</body>
+</html>

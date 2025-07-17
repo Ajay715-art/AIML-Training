@@ -1,0 +1,25 @@
+ header{
+        background-color: #81d527;
+        padding: 20px;
+        text-align: center;
+        position:fixed;
+        padding: 10px;
+        top:0;
+        width:100%;
+        color: blue;
+        
+}
+main{
+    padding: 20px;
+    background-color: #a9e028;
+    color:green;
+    margin: 20px;
+    min-height: auto;
+}
+footer{
+    background-color: #ff1d1d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}

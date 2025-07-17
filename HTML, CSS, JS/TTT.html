@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="TTT.css" />
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <div id="status">Player X's turn</div>
+    <div id="board"></div>
+    <button id="reset">Reset Game</button>
+    <script>
+      const board = document.getElementById("board");
+      const statusDiv = document.getElementById("status");
+      const resetBtn = document.getElementById("reset");
+      let cells = [];
+      let currentPlayer = "X";
+      let gameActive = true;
+      let boardState = ["", "", "", "", "", "", "", "", ""];
+      function renderBoard() {
+        board.innerHTML = "";
+        cells = [];
+        for (let i = 0; i < 9; i++) {
+          const cell = document.createElement("div");
+          cell.classList.add("cell");
+          cell.dataset.index = i;
+          cell.textContent = boardState[i];
+          cell.addEventListener("click", handleCellClick);
+          board.appendChild(cell);
+          cells.push(cell);
+        }
+      }
+      function handleCellClick(e) {
+        const idx = e.target.dataset.index;
+        if (!gameActive || boardState[idx]) return;
+        boardState[idx] = currentPlayer;
+        renderBoard();
+        if (checkWinner()) {
+          statusDiv.textContent = `Player ${currentPlayer} wins!`;
+          gameActive = false;
+        } else if (boardState.every((cell) => cell)) {
+          statusDiv.textContent = "It's a draw!";
+          gameActive = false;
+        } else {
+          currentPlayer = currentPlayer === "X" ? "O" : "X";
+          statusDiv.textContent = `Player ${currentPlayer}'s turn`;
+        }
+      }
+      function checkWinner() {
+        const winPatterns = [
+          [0, 1, 2],
+          [3, 4, 5],
+          [6, 7, 8],
+          [0, 3, 6],
+          [1, 4, 7],
+          [2, 5, 8],
+          [0, 4, 8],
+          [2, 4, 6],
+        ];
+        return winPatterns.some((pattern) => {
+          const [a, b, c] = pattern;
+          return (
+            boardState[a] &&
+            boardState[a] === boardState[b] &&
+            boardState[a] === boardState[c]
+          );
+        });
+      }
+
+      resetBtn.addEventListener("click", () => {
+        boardState = ["", "", "", "", "", "", "", "", ""];
+        currentPlayer = "X";
+        gameActive = true;
+        statusDiv.textContent = `Player ${currentPlayer}'s turn`;
+        renderBoard();
+      });
+
+      renderBoard();
+    </script>
+  </body>
+</html>
