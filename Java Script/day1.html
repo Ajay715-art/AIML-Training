@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="greet">Hi there</p>
+
+    <input type="text" id="nameinput" placeholder="Enter your Name"><br><br>
+
+    <button onclick="f()">click me</button>
+    <p id="greeting">Hi there</p>
+    <input type="number" placeholder="Enter Class number" id="clsinput"><br><br>
+    <button onclick="g()">cls</button>
+    <p class="c1">class1</p>
+    <p class="c1">class2</p>
+    <p class="c1">class3</p>
+    <script>
+
+        function f() {
+            document.getElementById("greeting").innerHTML = "Hello world!"
+            const name = document.getElementById('nameinput').value;
+            document.title = name;
+            switch (name) {
+                case "Bhanu":
+                    document.getElementById('greet').innerText = `pora shippesh`;
+                    break;
+                case "Ajay":
+                    document.getElementById('greet').innerText = `Hi ra Lime-tea`;
+                    break;
+                case "Nandhu":
+                    document.getElementById('greet').innerText = `Hey nandini`;
+                    break;
+                case "Santhosh":
+                    document.getElementById('greet').innerText = `Hey sweetie`;
+                    break;
+                case "Sai":
+                    document.getElementById('greet').innerText = `Hey Amul`;
+                    break;
+                default:
+                    document.getElementById('greet').innerText = `Hey ${name}`;
+            }
+        }
+        function g() {
+            const classname = document.getElementById("clsinput").value;
+
+            switch (classname) {
+                case "1":
+                    document.getElementsByClassName("c1")[0].innerText = `The changes are happening in class 1`
+                    break;
+                case "2":
+                    document.getElementsByClassName("c1")[1].innerText = `The changes are happening in class 2`;
+                    break;
+                case "3":
+                    document.getElementsByClassName("c1")[2].innerText = `The changes are happening in class 3`;
+                    break;
+                case "90":
+                    alert("Hi ra Lime Tea");
+                    break;
+                default:
+                    alert("No matching class found.");
+            }
+            
+        }
+        const newHeading = document.createElement("h3");
+        newHeading.innerText = `Hello, ${name}`;
+        document.body.appendChild(newHeading);
+        document.querySelector
+        
+    </script>
+</body>
+
+</html>

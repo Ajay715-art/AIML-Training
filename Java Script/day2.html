@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>kjhgfdoirgf jhsgdufyefbvks uysdbn  usxjnbuy hufgnjhb mnbfgiee  kiisngs
+            lskdjfgfireu ghpajn ajdfu ajknhdf vaijhfjurfn  ioafnreuir klajdnfu kewf
+            ar oi ia  ar fiohaijfnuygy  ahdfasjkdbv akhdbfifudsadbf akjdbhfy kjadshf 
+            aldhf bad fiahldkjf oaidjf iadfj naod fa fasdkjhaehf ihgdfoiugh n jbvnmkz
+        </p>
+    </div>
+    <button onclick="parachange()">click me</button>
+    <button onclick="paraback()">Go back to para</button>
+    <h1 class="head1">This is h1 heading</h1>
+    <button onclick="headchange()">click for para</button>
+    <script>
+        function parachange() {
+            document.querySelector('.container p').innerText = "The paragraph text has been changed!"
+        }
+        function paraback(){
+            document.querySelector('.container p').innerText = "kjhgfdoirgf jhsgdufyefbvks uysdbn  usxjnbuy hufgnjhb mnbfgiee  kiisngslskdjfgfireu ghpajn ajdfu ajknhdf vaijhfjurfn  ioafnreuir klajdnfu kewfar oi ia  ar fiohaijfnuygy  ahdfasjkdbv akhdbfifudsadbf akjdbhfy kjadshf aldhf bad fiahldkjf oaidjf iadfj naod fa fasdkjhaehf ihgdfoiugh n jbvnmkz";
+        }
+        function headchange() {
+            const h1 = document.querySelector('.head1');
+            document.body.removeChild(document.querySelector('.head1'));
+        }
+    </script>
+</body>
+</html>

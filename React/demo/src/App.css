@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(213, 191, 163);
+}
+.header {
+  background-color: #8e5656;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  width: 1000px;
+}
+.details{
+  background-color: rgb(255, 155, 155);
+  color: lightgray;
+  padding: 0% 1rem;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 97%;
+}
+.ff{
+  width: 30%;
+  height: 200px auto;
+  border-radius: 5px;
+}
+body{
+  background-color:blanchedalmond;
+}

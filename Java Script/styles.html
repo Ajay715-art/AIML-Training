@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+        color: #1eff00;
+        text-align: center;
+    }
+    h1 {
+        color: #c800ff;
+        text-align: center;
+        padding: 0.5em 1em;
+        border-radius: 4px;
+        display: inline-block;
+    }
+    .white-text{
+        color: #ffffff;
+        padding: 0.5em 1em;
+        text-align: center;
+        border-radius: 4px;
+        display: inline-block;
+        background-color: #108b00;
+    }
+    .color-btn {
+        margin: 1em;
+        padding: 0.5em 1.5em;
+        font-size: 1em;
+        border-radius: 4px;
+        border: none;
+        background: #c800ff;
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>Welcome to style demo</h1>
+    <p>This is a paragraph demonstrating the styles applied to this document</p>
+    <p class="white-text">This is a paragraph with white text on a green beckground</p>
+    <button class="color-btn" onclick="changeColors()">Change Colors</button>
+    <script>
+        document.body.style.backgroundColor = "white";
+        document.getElementsByTagName("h1")[0].style.backgroundColor = "lightblue";
+
+        function changeColors() {
+            // Array of random colors
+            const colors = ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff"];
+            // Pick random colors
+            const bodyColor = colors[Math.floor(Math.random() * colors.length)];
+            const h1Color = colors[Math.floor(Math.random() * colors.length)];
+            const pColor = colors[Math.floor(Math.random() * colors.length)];
+            // Apply colors
+            document.body.style.backgroundColor = bodyColor;
+            document.getElementsByTagName("h1")[0].style.backgroundColor = h1Color;
+            document.getElementsByTagName("h1")[0].style.color = "#fff";
+            document.querySelector(".white-text").style.backgroundColor = pColor;
+        }
+    </script>
+</body>

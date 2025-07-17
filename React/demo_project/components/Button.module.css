@@ -1,0 +1,20 @@
+.button {
+    background-color: #00e5ff;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border: solid 3px red;
+    border-radius: 20px;
+    cursor: pointer;
+    height:100px;
+    width:300px;
+}
+.bb{
+    background-color: #a600ff;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border: solid 3px rgb(0, 255, 204);
+    border-radius: 20px;
+    cursor: pointer;
+    height:100px;
+    width:300px;
+}
