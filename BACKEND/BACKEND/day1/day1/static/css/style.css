@@ -1,0 +1,20 @@
+body{
+    background-color: aqua;
+    color: black ;
+}
+body {
+    background-color: #e0f7fa;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #00796b;
+}
+nav a {
+    color: #006064;
+    text-decoration: none;
+    margin: 0 8px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
