@@ -4,15 +4,13 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Post Detail</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>This is for Sweety</h1>
-    <p>Hi ra potti</p>
-    {% for p in posts %}
-        <h2>{{ p.name }}</h2>
-        <h2>{{ p.roll }}</h2>
-    {% endfor %} 
+    <h1>Post Detail</h1>
+    <p>Name (slug): <strong>{{ post.name }}</strong></p>
+    <p>Roll (slug): <strong>{{ post.roll }}</strong></p>
+    <p>Slug: <strong>{{ post.slug }}</strong></p>
 </body>
 </html>
