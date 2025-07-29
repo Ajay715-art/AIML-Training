@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <img src="{{post.image.url}}" alt="{{post.name}}" >
     <h1>Post Detail</h1>
     <p>Name (slug): <strong>{{ post.name }}</strong></p>
     <p>Roll (slug): <strong>{{ post.roll }}</strong></p>
